@@ -1,0 +1,31 @@
+$y : #FDCC0D;
+$B : #141414;
+$L_B : #1B1B1B;
+.navbar{
+    display: flex;
+    justify-content: space-between;
+}
+ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    
+    display: flex;
+    margin: 10px;
+    margin-left: 20px;
+   li{
+       a{
+        text-decoration : none;
+        width: 100%; 
+        color : white;
+         margin : 10px;
+         font-size: 16px;
+         font-weight: bold; 
+         text-decoration:underline $y;
+       }
+   }
+  }
+  
+  .brand{
+    color :$y;
+  }
