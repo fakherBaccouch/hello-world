@@ -4,9 +4,7 @@ import './App.css';
 function App() {
   return (
     <div className="App">
-      work please
-      let me sleep please
-      changed
+      welcome to my burger app
     </div>
   );
 }
