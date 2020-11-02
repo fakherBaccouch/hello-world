@@ -16,7 +16,7 @@ const  Navbar=()=>{
          <a> <Link to="/addorder">ADD ORDER</Link></a>  
           </li>
           <li>
-         <a><Link to="/myorders">ORDERS</Link></a>   
+         <a><Link to="/orders">ORDERS</Link></a>   
           </li>
           <li>
            <a><Link to="/checkout">CHECKOUT</Link></a> 
