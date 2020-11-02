@@ -29,30 +29,38 @@ ul {
   .brand{
     color :$y;
   }
+  .addOrder{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
 .burger{
     color :white;
-    position: absolute;
-    top: 20%;
-    left : 50%;
-    transform: translate(-50%,-50%);
-    margin-top: 200px;
+    height: fit-content;
+    margin-top: 50px;
+    
 }
 .top-bread{
   width:400px;
   height: 90px;
-  background-color:$y ;
+  background-image: linear-gradient( to bottom, #eec07b, 		#422308);
   
-  border-radius: 1000px 1000px 0 0 ;
+  border-radius: 1000px 1000px 20px 7px  ;
   -webkit-box-shadow: 32px 54px 39px -10px rgba(0,0,0,0.74);
   -moz-box-shadow: 32px 54px 39px -10px rgba(0,0,0,0.74);
   box-shadow: 32px 54px 39px -10px rgba(0,0,0,0.74);
+
+
+
+
+  
+ 
 }
 .bottom-bread{
-  
+  background-image: linear-gradient( to bottom, #eec07b, 		#422308);
   width:400px;
   height: 60px;
-  background-color:$y ;
-  border-radius:0 0 100px 100px  ;
+  border-radius:7px 7px 100px 100px  ;
 
 }
 .salad{
@@ -76,7 +84,7 @@ border-radius: 10px;
 .cheese{
   width:400px;
   height: 30px;
-  background-color:yellow;
+  background-color:$y;
   margin-top:10px;
   margin-bottom:10px;
   border-radius: 10px;
@@ -92,9 +100,162 @@ border-radius: 10px;
 .bacon{
   width:400px;
   height: 40px;
-  background-color:pink;
+  background-color:#f65656;
   margin-top:10px;
   margin-bottom:10px;
   border-radius: 10px;
+
+}
+.controlsSection{
+  
+  width: 100vw;
+  height: 50vh;
+  display: flex;
+  justify-content: center;
+box-sizing: border-box;
+  
+}
+.div1,.div3{
+  width: 33vw;
+  height: 100%;
+  border-top: 12px solid white;
+  border-top-left-radius: 20px;
+  border-top-right-radius: 20px;
+}
+  .div2{
+    width: 34vw;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  
+ 
+.main-hr {
+  width: 30%;
+  border: none;
+  border-top: 1px solid #c3c3c3;
+}
+.icon-btn {
+  width: 50px;
+  height: 50px;
+  border: 1px solid #cdcdcd;
+  background: $y;
+  border-radius: 4px;
+  color: white;
+  overflow: hidden;
+  position: relative;
+  transition: width 0.2s ease-in-out;
+}
+.add-btn:hover {
+  width: 100px;
+}
+.add-btn::before,
+.add-btn::after {
+  transition: width 0.2s ease-in-out, border-radius 0.2s ease-in-out;
+  content: "";
+  position: absolute;
+  height: 4px;
+  width: 10px;
+  top: calc(50% - 2px);
+  background: black;
+}
+.add-btn::after {
+  right: 14px;
+  overflow: hidden;
+  border-top-right-radius: 2px;
+  border-bottom-right-radius: 2px;
+}
+.add-btn::before {
+  left: 14px;
+  border-top-left-radius: 2px;
+  border-bottom-left-radius: 2px;
+}
+.icon-btn:focus {
+  outline: none;
+}
+.btn-txt {
+  opacity: 0;
+  transition: opacity 0.2s;
+}
+.add-btn:hover::before,
+.add-btn:hover::after {
+  width: 4px;
+  border-radius: 2px;
+}
+.add-btn:hover .btn-txt {
+  opacity: 1;
+}
+.add-icon::after,
+.add-icon::before {
+  transition: all 0.2s ease-in-out;
+  content: "";
+  position: absolute;
+  height: 20px;
+  width: 2px;
+  top: calc(50% - 10px);
+  background:black;
+  overflow: hidden;
+}
+.add-icon::before {
+  left: 22px;
+  border-top-left-radius: 2px;
+  border-bottom-left-radius: 2px;
+}
+.add-icon::after {
+  right: 22px;
+  border-top-right-radius: 2px;
+  border-bottom-right-radius: 2px;
+}
+.add-btn:hover .add-icon::before {
+  left: 15px;
+  height: 4px;
+  top: calc(50% - 2px);
+}
+.add-btn:hover .add-icon::after {
+  right: 15px;
+  height: 4px;
+  top: calc(50% - 2px);
+}
+.btn {
+  margin: 20px;
+  width: 50vh;
+  color: grey;
+  font-size: 120%;
+
+  &:hover {
+      transform: translateY(-3px);
+      box-shadow: 0 10px 20px rgba(0, 0, 0, .2);
+  }
+
+  &:active {
+      transform: translateY(-1px);
+
+  }
+
+  &:link,
+  &:visited {
+      text-transform: uppercase;
+      text-decoration: none;
+      padding: 15px 40px;
+      display: inline-block;
+      border-radius: 100px;
+      transition: all 0.2s;
+  }
+
+  &-white {
+      background-color: white;
+      text-align: center;
+  }
+}
+.header{
+  font-size: 2rem;
+  text-transform: uppercase;
+  font-weight: 700;
+  display: inline-block;
+  background-clip: text;
+  -webkit-background-clip: text;
+  color: transparent;
+  transition: all.2s;
+  background-image: linear-gradient( $y, $B);
 
 }

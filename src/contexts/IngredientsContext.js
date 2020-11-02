@@ -14,7 +14,7 @@ export function IngProvider({ children }) {
       cheese: 4,
       bacon: 5,
       tomato:2,
-      price:6
+    
 
   })
 //add ingredients
@@ -28,7 +28,7 @@ function addIngredient(type) {
       )
   }
 //remove ingredients
-function addIngredient(type) {
+function removeIngredient(type) {
     setIngredients(
      (prevState)=>(
          {
@@ -45,7 +45,8 @@ function addIngredient(type) {
 
   const values = {
     ingredients ,
-    addIngredient
+    addIngredient,
+    removeIngredient
   }
 
   return (
