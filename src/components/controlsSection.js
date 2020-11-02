@@ -27,7 +27,7 @@ const controls= Object.keys(ingredients).map(
     <div className="div2">
     {controls}
 
-    <a href='www.facebook.com' className="btn btn-white">Discover</a>
+    <a href='www.facebook.com' className="btn btn-white">ORDER</a>
 
     <div></div>
 
