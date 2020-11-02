@@ -1,10 +1,14 @@
 import React from "react"
+import Burger from "./burger"
 
-const AddOrder=()=>{
-    return(
+
+
+const AddOrder = () => {
+    return (
         <div className="addOrder">
-            BURGER/
-            CONTROL PANNEL
+            
+          <Burger/>
+
         </div>
     )
 }
