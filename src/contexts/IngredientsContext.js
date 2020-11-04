@@ -10,7 +10,7 @@ export function IngProvider({ children }) {
   const [ingredients, setIngredients] = useState({
     cheese: 4,
       meat: 500,
-      bacon: 50,
+     
      
       bacon: 60,
       tomato:80,

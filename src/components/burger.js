@@ -7,7 +7,7 @@ const Burger = () => {
         Object.keys(ingredients).map(
             key => {
                 if (ingredients[key] > 0) {
-                return <div className={key}>X{ingredients[key]}</div>
+                    return <div className={key}>X{ingredients[key]}</div>
 
                 }
 

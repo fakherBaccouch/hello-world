@@ -1,4 +1,4 @@
-import './App.css';
+
 import Navbar from "./components/navbar"
 import React, {  useContext, useState, useEffect } from "react"
 import  IngProvider  from './contexts/IngredientsContext'

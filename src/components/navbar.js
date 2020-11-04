@@ -10,7 +10,7 @@ import {
 const  Navbar=()=>{
     return (
         <div className="navbar" >
-          <h1 className="brand">FAKHER</h1>
+          <h2 className="brand">FAKHER</h2>
                <ul>
           <li>
          <a> <Link to="/addorder">ADD ORDER</Link></a>  
@@ -22,7 +22,7 @@ const  Navbar=()=>{
            <a><Link to="/checkout">CHECKOUT</Link></a> 
           </li>
         </ul>
-        <ul > <div><PermIdentityIcon style={{color:"white",fontSize:"25px",marginLeft:"20px"}}/>lol</div> <div><ShoppingCartRoundedIcon style={{color:"white",fontSize:"25px",marginLeft:"20px"}}/></div></ul>
+        <ul > <div><PermIdentityIcon style={{color:"white",fontSize:"30px",marginLeft:"20px"}}/></div> <div><ShoppingCartRoundedIcon style={{color:"white",fontSize:"30px",marginLeft:"30px"}}/></div></ul>
        
         </div>
     )

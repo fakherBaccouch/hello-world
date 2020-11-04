@@ -1,10 +1,29 @@
-$y : #FDCC0D;
+@import url('https://fonts.googleapis.com/css?family=Source+Sans+Pro:regular,bold,italic&subset=latin,latin-ext');
+@import url('https://fonts.googleapis.com/css?family=Josefin+Sans');
+$y :#FAAF18;
 $B : #141414;
 $L_B : #1B1B1B;
+
+*{
+  padding: 0;
+  margin: 0;
+   box-sizing: border-box;
+
+}
+
+.App {
+  
+  background-color:  #1B1B1B;
+  background-color: #0f0f0f;
+  height: 100%;
+width: 100%;
+}
+
 .navbar{
     display: flex;
     justify-content: space-between;
 }
+
 ul {
     list-style-type: none;
     margin: 0;
@@ -18,10 +37,15 @@ ul {
         text-decoration : none;
         width: 100%; 
         color : white;
-         margin : 10px;
-         font-size: 20px;
+         margin-top : 10px;
+         margin : 15px;
+
+         font-size: 100%;
          font-weight: bold; 
-         text-decoration:underline $y;
+         text-decoration: none;
+         &:active{
+          text-decoration:underline $y;
+         }
        }
    }
   }
@@ -30,33 +54,35 @@ ul {
     color :$y;
   }
   .addOrder{
+    height: 100%;
+    width: 100%;
     display: flex;
     flex-direction: column;
     align-items: center;
   }
 .burger{
     color :white;
-    height: fit-content;
-    margin-top: 50px;
+    height:fit-content;
+    z-index: 5;
+    margin-top: 120px;
+    margin-bottom: 30px;
 
+
+ width: 300px;
     
 }
 .top-bread{
-  height: 100px;
+  height:60px;
   border-radius: 900px 900px 10px 10px;
   background-color: #A27732;
   border-top: 9px solid #906725;
-
-
-
-
-  
  
 }
+
 .bottom-bread{
   background-color: #A27732;
-  width:400px;
-  height: 60px;
+  
+  height: 30px;
   border-radius:7px 7px 100px 100px  ;
   border-radius: 10px 10px 50px 50px;
   
@@ -69,6 +95,7 @@ height: 8px;
 border-bottom: 3px solid #0F6D12;
 
 }
+
 .meat{
   border-radius: 15px;
   background-color: #603102;
@@ -84,7 +111,8 @@ border-bottom: 3px solid #0F6D12;
 }
 .tomato{
   border-radius: 14px;
-  background-color: #F13233;
+  z-index: 500;
+  background-color: #EE1D23;
   height: 20px;
   border-bottom: 5px solid #940C0E;
 }
@@ -93,30 +121,20 @@ border-bottom: 3px solid #0F6D12;
   background-color: #B95381;
   height: 13px;
   border-bottom: 4px solid #7E1846;
-
+  z-index: 500;
 }
 .controlsSection{
   
   width: 100vw;
-  height: 50vh;
-  display: flex;
-  justify-content: center;
-box-sizing: border-box;
-  
-}
-.div1,.div3{
-  width: 33vw;
   height: 100%;
-  border-top: 12px solid $y;
-  border-top-left-radius: 20px;
-  border-top-right-radius: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  align-content: flex-start;
+box-sizing: border-box;
+
 }
-  .div2{
-    width: 34vw;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-  }
+
   
  
 .main-hr {
@@ -207,9 +225,9 @@ box-sizing: border-box;
 }
 .btn {
   margin: 20px;
-  width: 25vh;
-  color: white;
-  font-size: 120%;
+  width: 200%;
+  font-size: 16px;
+  border-radius: 50px;
 
   &:hover {
       transform: translateY(-3px);
@@ -217,7 +235,7 @@ box-sizing: border-box;
   }
 
   &:active {
-      transform: translateY(-1px);
+      transform: translateY(-3px);
 
   }
 
@@ -229,23 +247,129 @@ box-sizing: border-box;
       display: inline-block;
       border-radius: 100px;
       transition: all 0.2s;
+      
   }
 
   &-white {
       background-image: linear-gradient(to right, $y,$y);
       text-align: center;
-      color: black;
+      color: white;
+      font-weight: 5000;
   }
 }
 .header{
-  font-size: 2rem;
+  position: absolute;
+  
   text-transform: uppercase;
   font-weight: 700;
   display: inline-block;
   background-clip: text;
   -webkit-background-clip: text;
   color: transparent;
-  transition: all.2s;
-  background-image: linear-gradient( $y, $B);
+  font-family: 'Josefin Sans', cursive;
+
+  background-image: linear-gradient( white, white);
+  color:white;
+}
+.modalOpen{
+  
+  background-color: whitesmoke;
+  width: 40vw;
+  height: 52vh;
+  text-align: center;
+  border-radius: 4px;
+  padding: 20px;
+  position: absolute;
+  top: 50%;
+  border: 5px solid red;
+  left: 50%;
+  &Header1, &Header2{
+   margin: 20px;
+  
+  }
+ 
+  &Ul{
+    display: inline-block;
+    color:white;
+  }
+}
+
+
+
+.modal {
+
+  position: fixed; /* Stay in place */
+  z-index: 500; /* Sit on top */
+  padding-top: 150px; /* Location of the box */
+  left: 0;
+  overflow: scroll;
+  top: 0;
+  width: 100%; /* Full width */
+  height: 100%; /* Full height */
+  overflow: auto; /* Enable scroll if needed */
+  background-color: rgb(0,0,.9); /* Fallback color */
+  background-color: rgba(0,0,0,.8); /* Black w/ opacity */
+  
+}
+
+/* Modal Content */
+.modal-content {
+  position: relative;
+  background-color: #fefefe;
+  margin: auto;
+  
+  padding: 40px;
+  border: 1px solid #888;
+  width:30%;
+  box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2),0 6px 20px 0 rgba(0,0,0,0.19);
+  -webkit-animation-name: animatetop;
+  -webkit-animation-duration: 0.4s;
+  animation-name: animatetop;
+  animation-duration: 0.4s
+}
+
+/* Add Animation */
+@-webkit-keyframes animatetop {
+  from {top:-300px; opacity:0} 
+  to {top:0; opacity:1}
+}
+
+@keyframes animatetop {
+  from {top:-300px; opacity:0}
+  to {top:0; opacity:1}
+}
+
+/* The Close Button */
+.close {
+  color: white;
+  float: right;
+  font-size: 28px;
+  font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+  color: #000;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.modal-header {
+  padding: 2px 16px;
+  background-color: #5cb85c;
+  color: white;
+}
+
+.modal-body {padding: 2px 16px;}
+
+.modal-footer {
+  padding: 2px 16px;
+  background-color: #5cb85c;
+  color: white;
+}
+#modalUlId{
+  display:flex ;
+  justify-content: space-between;
+  border-bottom: 1px solid grey;
 
 }
