@@ -1,4 +1,5 @@
 import React, {  useContext, useState, useEffect } from "react";
+import burger_logo from '../images/burger_logo.png' // relative path to image 
 
 const Signin=()=>{
    
@@ -7,6 +8,8 @@ const Signin=()=>{
     <div className="signin_container">
 
     <h1 id='signin_title'>SIGNIN</h1>
+    <img style={{display:"block",width:"30%" , height:"20%",marginLeft:"33%"}} src={burger_logo}></img>
+
     <form>
     
     <div class="group">      
@@ -26,7 +29,8 @@ const Signin=()=>{
      <p>Don't have an account yet?</p>
      <button className="button button_to_signup">SIGN UP</button>
     </div>
-            
+  
+
         </div>
     )
 }

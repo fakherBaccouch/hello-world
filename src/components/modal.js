@@ -33,7 +33,7 @@ const Modal=()=>{
 <span style={{borderBottom:"1px solid grey",paddingBottom:"20px",fontWeight:"600"}} id="modalUlId" ><span id='modalUlIdChild1' ><span id="lol">QTY</span><span id="xd">ITEM</span></span><span id='odalUlIdChild2'>PRICE</span></span>
 {Object.keys(ingredients).map(
   (key)=>{
-   return <div> <span id="modalUlId"  ><span   id="modalUlIdChild1"><span id="lol" >{ingredients[key]}</span><span  id="xd">{key}</span></span><span   id='modalUlIdChild2'>$15</span></span></div>
+   return <div> <span id="modalUlId"  ><span   id="modalUlIdChild1"><span id="qte" >{ingredients[key]}</span><span  id="item">{key}</span></span><span   id='modalUlIdChild2'>$15</span></span></div>
    
 
   }

@@ -22,8 +22,8 @@ const  Navbar=()=>{
            <a><Link to="/checkout">CHECKOUT</Link></a> 
           </li>
         </ul>
-        <ul > <div><PermIdentityIcon style={{color:"white",fontSize:"30px",marginLeft:"20px"}}/></div> <div><ShoppingCartRoundedIcon style={{color:"white",fontSize:"30px",marginLeft:"30px"}}/></div></ul>
-       
+        
+        <ul > <div><Link to="/signin"><PermIdentityIcon link style={{color:"white",fontSize:"30px",marginLeft:"20px"}}/></Link></div> <div><ShoppingCartRoundedIcon style={{color:"white",fontSize:"30px",marginLeft:"30px"}}/></div></ul>
         </div>
     )
 }
