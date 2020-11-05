@@ -9,16 +9,17 @@ export const   useING=()=> {
 export function IngProvider({ children }) {
   const [ingredients, setIngredients] = useState({
     cheese: 4,
-      meat: 500,
+      meat: 2,
      
      
-      bacon: 60,
-      tomato:80,
-      salad: 100
+      bacon: 3,
+      tomato:1,
+      salad: 1
 
   })
 //add ingredients
 function addIngredient(type) {
+
       setIngredients(
        (prevState)=>(
            {
@@ -29,13 +30,14 @@ function addIngredient(type) {
   }
 //remove ingredients
 function removeIngredient(type) {
-    setIngredients(
-     (prevState)=>(
-         {
-             ...prevState,
-          [type] :prevState[type]-1  }
-     )
+  if(ingredients[type]>0){ setIngredients(
+    (prevState)=>(
+        {
+            ...prevState,
+         [type] :prevState[type]-1  }
     )
+   )}
+   
 }
 
 

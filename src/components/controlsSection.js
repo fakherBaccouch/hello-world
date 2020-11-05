@@ -14,6 +14,7 @@ const controls= Object.keys(ingredients).map(
         ) 
     }
 )
+
     return (
         
             <div className="controlsSection">
@@ -22,11 +23,11 @@ const controls= Object.keys(ingredients).map(
    
 
 
-   {controls}
+  {controls}
 
 
 
-
+   
 
 
 

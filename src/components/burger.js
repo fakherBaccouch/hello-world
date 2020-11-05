@@ -13,11 +13,13 @@ const Burger = () => {
 
             }
         )
-
+        const sum = Object.values(ingredients).reduce(
+            (previousScore, currentScore, index)=>previousScore+currentScore, 
+            0);
     return (
         <div className="burger">
             <div className="top-bread"></div>
-            {ing}
+            {sum<=0?<p style={{margin:"10px"}}>ADD ITEMS TO YOUR HAMBURGER</p>:ing}
 
             <div className="bottom-bread"></div>
         </div>

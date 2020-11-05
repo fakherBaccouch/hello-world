@@ -14,8 +14,8 @@ import {
 
 import './styling/AppScss.scss';
 import AddOrder from "./components/addOrder"
-import CheckOutPage from "./components/checkoutPage"
 import UserOrders from "./components/userOrders"
+import Signin from "./components/signin"
 export function App() {  
 
   return (
@@ -31,13 +31,13 @@ export function App() {
           <AddOrder/>
 
           </Route>
-          <Route path="/checkout">
-            <CheckOutPage/>
-
-          </Route>
+        
          
           <Route path="/orders">
             <UserOrders/>
+          </Route>
+          <Route path="/signin">
+            <Signin/>
           </Route>
         </Switch>
      
