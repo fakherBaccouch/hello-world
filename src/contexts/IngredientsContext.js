@@ -12,7 +12,7 @@ export function IngProvider({ children }) {
       meat: 0,
      
      
-      bacon: 0,
+      bacon: 1,
       tomato:0,
       salad: 0
 
