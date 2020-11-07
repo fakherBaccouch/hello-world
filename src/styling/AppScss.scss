@@ -9,7 +9,7 @@ $L_B : #1B1B1B;
   padding: 0;
   margin: 0;
    box-sizing: border-box;
-  
+  color:$y;
 
 }
 
@@ -559,10 +559,27 @@ p{
 
 
 
+.logout{
+  height: 100vh;
+  display: flex;
+  flex-direction:column;
+  align-items: center;
+   justify-content: center;
+   font-family: 'Permanent Marker', cursive;
+  &_header{
+ margin-top:100px;
+
+  }
+}
 
 
+.logout_nav{
+  display: flex;
+  width: 100%;
+  justify-content: space-around;
+  font-family: 'Permanent Marker', cursive;
 
-
+}
 
 
 

@@ -3,6 +3,9 @@ import Navbar from "./components/navbar"
 import React, {  useContext, useState, useEffect } from "react"
 import  IngProvider  from './contexts/IngredientsContext'
 import {useAuth} from "./contexts/IngredientsContext"
+import { AuthProvider } from "./contexts/AuthContext"
+import PrivateRoute from "./privateRoute"
+
 
 import {
   BrowserRouter as Router,
@@ -17,13 +20,14 @@ import AddOrder from "./components/addOrder"
 import UserOrders from "./components/userOrders"
 import Signin from "./components/signin"
 import Signup from "./components/signup"
+import Logout from "./components/logout.js"
 
 export function App() {  
 
   return (
 <div style={{height:"100%"}} className="App">
   <Router>
- <IngProvider>
+    <AuthProvider ><IngProvider>
  <Navbar/>
       <Switch>
           <Route exact path="/">
@@ -34,19 +38,20 @@ export function App() {
 
           </Route>
         
-         
+          <PrivateRoute exact path="/signin" component={Signin} />
           <Route path="/orders">
             <UserOrders/>
           </Route>
-          <Route path="/signin">
-            <Signin/>
+          <Route exact path="/logout">
+            <Logout/>
           </Route>
           <Route path="/signup">
             <Signup/>
           </Route>
         </Switch>
      
- </IngProvider>
+ </IngProvider></AuthProvider>
+ 
      
   </Router>
  

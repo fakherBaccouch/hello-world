@@ -8,13 +8,13 @@ export const   useING=()=> {
 
 export function IngProvider({ children }) {
   const [ingredients, setIngredients] = useState({
-    cheese: 4,
-      meat: 2,
+    cheese: 0,
+      meat: 0,
      
      
-      bacon: 3,
-      tomato:1,
-      salad: 1
+      bacon: 0,
+      tomato:0,
+      salad: 0
 
   })
 //add ingredients

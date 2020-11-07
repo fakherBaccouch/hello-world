@@ -1,30 +1,58 @@
-import React, {  useContext, useState, useEffect } from "react";
-import burger_logo from '../images/burger_logo.png' // relative path to image 
+import React, { createContext, useContext, useState, useEffect, useRef } from "react";
+import burger_logo from '../images/burger_logo.png';
+import { useAuth } from "../contexts/AuthContext";
 import {
   BrowserRouter as Router,
   Switch,
   Route,
+  useHistory,
   Link
 } from "react-router-dom";
 const Signin=()=>{
-   
+  const emailRef = useRef()
+  const passwordRef = useRef()
+  const { login } = useAuth()
+  const [error, setError] = useState("")
+  const [loading, setLoading] = useState(false)
+  const history = useHistory()
+const{ currentUser} = useAuth()
+  async function handleSubmit(e) {
+    e.preventDefault()
+
+    try {
+      setError("")
+      setLoading(true)
+      console.log(emailRef.current.value)
+     await  login(emailRef.current.value, passwordRef.current.value)
+      history.push("/addorder")
+    } catch {
+      setError("Failed to log in")
+    }
+
+    setLoading(false)
+  }
+  useEffect(
+    ()=>{
+      console.log(currentUser)
+    }
+  )
     return(
         <div className="signin">
     <div style={{position:"relative"}} className="signin_container">
 
     <h1 id='signin_title'>SIGNIN</h1>
     <img src={burger_logo} style={{height:"100px",left:"33%",textAlign:"center",display:"block",  marginLeft:"auto", marginRight:"auto"}}></img>
-    <form>
+    <form  onSubmit={handleSubmit}>
     
     <div class="group">      
-      <input type="text" required></input>
+      <input ref={passwordRef} ref={emailRef} type="email" required></input>
       <span class="highlight"></span>
      
       <label>Adresse Email*</label>
     </div>
       
     <div class="group">      
-      <input type="password" required></input>
+      <input  ref={passwordRef} type="password" required></input>
       <span class="highlight"></span>
       <label>Passwrod</label>
     </div>
