@@ -15,35 +15,43 @@ $L_B : #1B1B1B;
 
 .App {
   
-background-image:linear-gradient($B,$L_B) ;
+background:black;
   height: 100%;
 width: 100%;
 }
 
 .navbar{
+  background-color: #1B1B1B;
+  position: fixed; /* Set the navbar to fixed position */
+  width: 100%; /* Full width */
+  z-index:100000;
     display: flex;
+    align-items: center;
     justify-content: space-between;
+    height: 75px;
 }
 
 ul {
     list-style-type: none;
     margin: 0;
     padding: 0;
-    
+    justify-content:center;
     display: flex;
-    margin: 10px;
-    margin-left: 20px;
+    align-items: center;
+
+
+
    li{
+    margin-right: 20px;
+
        a{
         text-decoration : none;
         width: 100%; 
         color : white;
-         margin-top : 10px;
-         margin : 15px;
 
          font-size: 100%;
          font-weight: bold; 
-         text-decoration: none;
+         text-decoration: underline $y;
          &:active{
           text-decoration:underline $y;
          }
@@ -65,7 +73,7 @@ ul {
     color :white;
     height:fit-content;
     z-index: 5;
-    margin-top: 120px;
+    margin-top: auto;
     margin-bottom: 30px;
 text-align: center;
  width: 300px;
@@ -261,11 +269,10 @@ box-sizing: border-box;
   }
 }
 .header{
-  position: absolute;
-  
+  margin-top: 42px;
   text-transform: uppercase;
   font-weight: 700;
-  display: inline-block;
+  display: block;
   background-clip: text;
   -webkit-background-clip: text;
   color: transparent;
@@ -549,3 +556,51 @@ p{
   font-weight: 700;
   color: $L_B;
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

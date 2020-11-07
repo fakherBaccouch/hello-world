@@ -16,6 +16,8 @@ import './styling/AppScss.scss';
 import AddOrder from "./components/addOrder"
 import UserOrders from "./components/userOrders"
 import Signin from "./components/signin"
+import Signup from "./components/signup"
+
 export function App() {  
 
   return (
@@ -38,6 +40,9 @@ export function App() {
           </Route>
           <Route path="/signin">
             <Signin/>
+          </Route>
+          <Route path="/signup">
+            <Signup/>
           </Route>
         </Switch>
      

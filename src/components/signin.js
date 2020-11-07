@@ -1,15 +1,19 @@
 import React, {  useContext, useState, useEffect } from "react";
 import burger_logo from '../images/burger_logo.png' // relative path to image 
-
+import {
+  BrowserRouter as Router,
+  Switch,
+  Route,
+  Link
+} from "react-router-dom";
 const Signin=()=>{
    
     return(
         <div className="signin">
-    <div className="signin_container">
+    <div style={{position:"relative"}} className="signin_container">
 
     <h1 id='signin_title'>SIGNIN</h1>
-    <img style={{display:"block",width:"30%" , height:"20%",marginLeft:"33%"}} src={burger_logo}></img>
-
+    <img src={burger_logo} style={{height:"100px",left:"33%",textAlign:"center",display:"block",  marginLeft:"auto", marginRight:"auto"}}></img>
     <form>
     
     <div class="group">      
@@ -27,7 +31,7 @@ const Signin=()=>{
     <button className="button button_signin">SIGN IN</button>
   </form>
      <p>Don't have an account yet?</p>
-     <button className="button button_to_signup">SIGN UP</button>
+     <Link to="/signup"><button className="button button_to_signup">SIGN UP</button></Link>   
     </div>
   
 

@@ -1,6 +1,7 @@
 import React from "react"
 import PermIdentityIcon from '@material-ui/icons/PermIdentity';
 import ShoppingCartRoundedIcon from '@material-ui/icons/ShoppingCartRounded';
+import brand from "../images/brand.png"
 import {
     BrowserRouter as Router,
     Switch,
@@ -10,8 +11,8 @@ import {
 const  Navbar=()=>{
     return (
         <div className="navbar" >
-          <h2 className="brand">FAKHER</h2>
-               <ul>
+        <img style={{height:"60px"}} src={brand}></img>
+               <ul style={{marginLeft:'4%'}}>
           <li>
          <a> <Link to="/addorder">ADD ORDER</Link></a>  
           </li>
