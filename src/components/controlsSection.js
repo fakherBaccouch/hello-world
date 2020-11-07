@@ -6,10 +6,10 @@ const ControlsSection = ()=>{
 const controls= Object.keys(ingredients).map(
     (key)=>{
         return(
-            <div style={{display:"flex",alignItems    :"center"}}>
-                <a onClick={()=>addIngredient(key)} style={{cursor:"pointer",display:'inline',fontSize:"50px",color:"white"}}>+</a>
-        <p style={{display : "inline-block",color:"#FAAF18",marginLeft:"20px",marginRight:"20px",fontSize:"20px",textTransform:"uppercase",fontFamily:"cursive"}}>{key}</p> 
-        <a onClick={()=>removeIngredient(key)} style={{cursor:"pointer",display:'inline',fontSize:"50px",color:"white"}}>-</a>
+            <div style={{display:"flex",alignItems:"center",width:'20%',justifyContent:"space-between" }}>
+                <a onClick={()=>addIngredient(key)} style={{width:"20%",cursor:"pointer",fontSize:"50px",color:"white"}}>+</a>
+        <p style={{display : "inline-block",width:"60%",color:"#FAAF18",fontSize:"20px",textTransform:"uppercase",fontFamily:"cursive"}}>{key}</p> 
+        <a onClick={()=>removeIngredient(key)} style={{width:"20%",cursor:"pointer",fontSize:"50px",color:"white"}}>-</a>
             </div>
         ) 
     }

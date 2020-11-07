@@ -9,7 +9,7 @@ $L_B : #1B1B1B;
   padding: 0;
   margin: 0;
    box-sizing: border-box;
-  color:$y;
+
 
 }
 
@@ -29,6 +29,8 @@ width: 100%;
     align-items: center;
     justify-content: space-between;
     height: 75px;
+    opacity:0.8;
+    color:white;
 }
 
 ul {
@@ -96,7 +98,7 @@ text-align: center;
   
   border-bottom: 11px solid #724D12;
 }
-.salad{
+.Salad{
   border-radius: 8px;
 background-color: #80D041;
 height: 8px;
@@ -104,27 +106,27 @@ border-bottom: 3px solid #0F6D12;
 
 }
 
-.meat{
+.Meat{
   border-radius: 15px;
   background-color: #603102;
   height: 30px;
   border-bottom: 16px solid #402408;
 
 }
-.cheese{
+.Cheese{
   background-color: #E8EA02;
   border-radius: 10px;
   height: 15px;
   border-bottom: 5px solid #EAB902;
 }
-.tomato{
+.Tomato{
   border-radius: 14px;
   z-index: 500;
   background-color: #EE1D23;
   height: 20px;
   border-bottom: 5px solid #940C0E;
 }
-.bacon{
+.Bacon{
   border-radius: 8px;
   background-color: #B95381;
   height: 13px;
@@ -385,10 +387,13 @@ box-sizing: border-box;
   &Child1{
     width: 50%;
     text-align: left;
+   &:last-of-type{
+     color:red;
+   }
   }
-
-
+  
 }
+
 #qte{
   text-align: center;
   width: 50%;
@@ -429,6 +434,10 @@ text-align: left;
     margin-right: 20%;
 
   }
+  &_signin:hover{
+    background: $y;
+    color: black;
+  }
   &_to_signup{
     background-color: white;
     color: $y;
@@ -441,6 +450,11 @@ text-align: left;
     margin-right: 20%;
     margin-bottom: 20px;
 
+  }
+  &_to_signup:hover{
+    background: $y;
+    color: black;
+    border: 2px solid grey;
   }
 }
 .button4 {font-weight: bold;  background-color: $y;text-align: center; color: black;border-radius:25px} /* Gray */ 
@@ -566,10 +580,13 @@ p{
   align-items: center;
    justify-content: center;
    font-family: 'Permanent Marker', cursive;
+   color :$y;
+
   &_header{
  margin-top:100px;
 
   }
+  
 }
 
 
@@ -578,7 +595,6 @@ p{
   width: 100%;
   justify-content: space-around;
   font-family: 'Permanent Marker', cursive;
-
 }
 
 
@@ -586,7 +602,10 @@ p{
 
 
 
-
+.logout_button:hover{
+    background-color: $y;
+    border: 1px solid white;
+}
 
 
 

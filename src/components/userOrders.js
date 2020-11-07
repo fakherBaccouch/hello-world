@@ -6,44 +6,8 @@ const UserOrders=()=>{
   
     return(
         <div className="addOrder">
-          <h1>loo</h1>
-          <h1>loo</h1>
+        
 
-          <h1>loo</h1>
-
-          <h1>loo</h1>
-
-          <h1>loo</h1>
-
-
-          <h1>loo</h1>
-
-          <h1>loo</h1>
-
-          <h1>loo</h1>
-
-          <h1>loo</h1>
-
-
-          <h1>loo</h1>
-
-          <h1 style={{color:"red"}}>loo</h1>
-
-          <h1>loo</h1>
-
-
-          <h1>loo</h1>
-
-          <h1>loo</h1>
-
-          <h1>loo</h1>
-
-          <h1>loo</h1>
-
-          <h1>loo</h1>
-
-
-      <p>{ ingredients && ingredients["salad"]}</p>    
         </div>
     )
 }

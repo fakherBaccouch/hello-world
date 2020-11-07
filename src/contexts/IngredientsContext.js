@@ -8,15 +8,26 @@ export const   useING=()=> {
 
 export function IngProvider({ children }) {
   const [ingredients, setIngredients] = useState({
-    cheese: 0,
-      meat: 0,
+    Cheese: 0,
+      Meat: 0,
      
      
-      bacon: 1,
-      tomato:0,
-      salad: 1
+      Bacon:0 ,
+      Tomato:0,
+      Salad: 0
 
   })
+  const [prices] = useState({
+    Cheese: 0.5,
+    Meat: 0.8,
+     
+     
+    Bacon: 0.8,
+    Tomato:0.2,
+    Salad: 0.2
+
+  })
+  const [price,setPrice] = useState(4)
 //add ingredients
 function addIngredient(type) {
 
@@ -27,6 +38,9 @@ function addIngredient(type) {
             [type] :prevState[type]+1   }
        )
       )
+      let newPrice = price + prices[type]
+      setPrice(newPrice)
+
   }
 //remove ingredients
 function removeIngredient(type) {
@@ -37,8 +51,8 @@ function removeIngredient(type) {
          [type] :prevState[type]-1  }
     )
    )}
-   
-}
+   let newPrice = price - prices[type]
+   setPrice(newPrice)}
 
 
 
@@ -48,7 +62,9 @@ function removeIngredient(type) {
   const values = {
     ingredients ,
     addIngredient,
-    removeIngredient
+    removeIngredient,
+    price,
+    prices
   }
 
   return (
