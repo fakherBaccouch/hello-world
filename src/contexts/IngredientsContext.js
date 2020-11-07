@@ -14,7 +14,7 @@ export function IngProvider({ children }) {
      
       bacon: 1,
       tomato:0,
-      salad: 0
+      salad: 1
 
   })
 //add ingredients
