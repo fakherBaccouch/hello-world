@@ -20,7 +20,7 @@ import AddOrder from "./components/addOrder"
 import UserOrders from "./components/userOrders"
 import Signin from "./components/signin"
 import Signup from "./components/signup"
-import Logout from "./components/logout.js"
+import Account from "./components/account"
 
 export function App() {  
 
@@ -42,8 +42,8 @@ export function App() {
           <Route path="/orders">
             <UserOrders/>
           </Route>
-          <Route exact path="/logout">
-            <Logout/>
+          <Route exact path="/account">
+            <Account/>
           </Route>
           <Route path="/signup">
             <Signup/>

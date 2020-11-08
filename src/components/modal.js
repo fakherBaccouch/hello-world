@@ -41,10 +41,10 @@ const Modal=()=>{
 
 <h1 style={{margin:"10px",textAlign:"center"}}>Your Order</h1>
 <p style={{textAlign:"left"}}>{dateTime}</p>
-<span style={{borderBottom:"1px solid grey",paddingBottom:"20px",fontWeight:"600"}} id="modalUlId" ><span id='modalUlIdChild1' ><span id="qte">QTY</span><span id="item">ITEM</span></span><span id='odalUlIdChild2'>PRICE</span></span>
+<span style={{borderBottom:"1px dashed grey",paddingBottom:"20px",fontWeight:"600"}} id="modalUlId" ><span id='modalUlIdChild1' ><span id="qte">QTY</span><span id="item">ITEM</span></span><span id='odalUlIdChild2'>PRICE</span></span>
 {Object.keys(ingredients).map(
   (key)=>{
-   return <div class="test"> <span id="modalUlId"  ><span   id="modalUlIdChild1"><span id="qte" >{ingredients[key]}</span><span  id="item">{key}</span></span><span   id='modalUlIdChild2'>${prices[key]> 0? prices[key] * ingredients[key]:"0" }</span></span></div>
+   return <div class="test"> <span id="modalUlId"  ><span   id="modalUlIdChild1"><span id="qte" >{ingredients[key]}</span><span  id="item">{key}</span></span><span   id='modalUlIdChild2'>${ prices[key] * ingredients[key]}</span></span></div>
    
 
   }

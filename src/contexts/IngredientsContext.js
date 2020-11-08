@@ -38,8 +38,8 @@ function addIngredient(type) {
             [type] :prevState[type]+1   }
        )
       )
-      let newPrice = price + prices[type]
-      setPrice(newPrice)
+      var pr = price
+      setPrice(pr + prices[type])
 
   }
 //remove ingredients
@@ -50,9 +50,14 @@ function removeIngredient(type) {
             ...prevState,
          [type] :prevState[type]-1  }
     )
-   )}
-   let newPrice = price - prices[type]
-   setPrice(newPrice)}
+    
+  
+   )
+   var pr = price
+   setPrice(pr - prices[type])
+  }
+   
+  }
 
 
 
