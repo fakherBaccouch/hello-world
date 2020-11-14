@@ -21,6 +21,8 @@ import UserOrders from "./components/userOrders"
 import Signin from "./components/signin"
 import Signup from "./components/signup"
 import Account from "./components/account"
+import Checkout from "./components/checkout"
+
 
 export function App() {  
 
@@ -47,6 +49,9 @@ export function App() {
           </Route>
           <Route path="/signup">
             <Signup/>
+          </Route>
+          <Route path="/checkout">
+            <Checkout/>
           </Route>
         </Switch>
      

@@ -1,5 +1,5 @@
 import React,{useState} from 'react';
-
+import {Link} from "react-router-dom"
 import { useING } from "../contexts/IngredientsContext"
 
 const Modal=()=>{
@@ -52,8 +52,10 @@ const Modal=()=>{
 )}
 <span style={{float:"right",display:"flex",marginLeft:"10px"}}  id='modalUlIdChild2'><span style={{fontWeight:"600"}}>Total</span>:${price}</span>
 
-    
-<button class="button">CHECKOUT</button>
+<Link to="checkout">
+<button  class="button">CHECKOUT</button>
+</Link>
+
 
 </div>
 </div>
