@@ -18,8 +18,7 @@ import {
     return (
         <div  className="logout">
 <h1 className="logout_header">MY ACCOUNT</h1>    
-
-<button  onClick={()=>logingOut()} style={{color:"black",width:"20%",margin:"100px auto",borderRadius:"0"}}className="button button_to_signup logout_button">LOG OUT</button> 
+<button  Redirect="/signin" onClick={()=>logingOut()} style={{color:"black",width:"20%",margin:"100px auto",borderRadius:"0"}}className="button button_to_signup logout_button">LOG OUT</button> 
 
 <div className="logout_nav"><div><h1>ORDERS HISTORY</h1><p style={{color:"grey"}}>You haven't placed any orders yet.
 

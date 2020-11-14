@@ -9,6 +9,7 @@ import {
     Link
 } from "react-router-dom";
 import axios from "axios"
+import Burger from "./burger";
 
 const Checkout = () => {
     const history = useHistory()
@@ -19,7 +20,7 @@ const Checkout = () => {
         name: "",
         street: "",
         zipCode: "",
-        email: currentUser.email,
+        email:currentUser && currentUser.email,
         country: "",
         deleveryMethod: "select"
     })
@@ -41,20 +42,45 @@ const Checkout = () => {
         )
     }
     return (
-        <div>
-            <h1 style={{color:"red",fontSize:"100px"}}>{price}</h1>
-            <form onSubmit={(event) => Checkout(event)}>
-                <input onChange={(event) => editInfo(event.target)} type='text' name="name" placeholder="name" />
-                <input onChange={(event) => editInfo(event.target)} type='text' name="street" placeholder="street" />
-                <input onChange={(event) => editInfo(event.target)} type='text' name="zipCode" placeholder="zipCode" />
-                <input onChange={(event) => editInfo(event.target)} type='text' name="country" placeholder="Country" />
-                <select name="deleveryMethod" onChange={(event) => editInfo(event.target)}  >
-                    <option value="Select">Select</option>
-                    <option value="fast">FastDelevery</option>
-                    <option value="normal">normalDelevery </option>
-                </select>
-                <button type="submit" >FINAL CHECKOUT</button>
-            </form>
+        <div className="checkout">
+         <h1 style={{fontSize:"50px",marginTop:"80px"}} className="header">We hope it tastes well !!!</h1>
+            <div style={{display:"flex",alignItems:"center",margin:"40px"}}>
+                <Burger/>
+               
+            </div>
+            <div style={{position:"relative",margin:"20px",width:"30%",borderRadius:"5px"}} className="signin_container">
+            <form   onSubmit={(event)=>Checkout(event)}>
+           
+        
+      
+    
+    <div style={{margin:"20px"}} class="group">      
+    <input required style={{borderRadius:"0"}} onChange={(event) => editInfo(event.target)} type='text' name="name" placeholder="name" />
+      <span class="highlight"></span>
+     
+      
+    </div>
+      
+    <div style={{margin:"20px"}}class="group">      
+    <input required style={{borderRadius:"0"}} onChange={(event) => editInfo(event.target)} type='text' name="street" placeholder="street" />
+      <span class="highlight"></span>
+    
+    </div>
+      
+    <div style={{margin:"20px"}} class="group">      
+    <input required style={{borderRadius:"0"}} onChange={(event) => editInfo(event.target)} type='text' name="zipCode" placeholder="zipCode" />
+      <span class="highlight"></span>
+    
+    </div>
+    <div style={{margin:"20px"}}class="group">      
+    <input required style={{borderRadius:"0"}} onChange={(event) => editInfo(event.target)} type='text' name="country" placeholder="country" />
+      <span class="highlight"></span>
+    
+    </div>
+    <button type="submit" style={{background:"#FAAF18",color:"black"}}className="button button_signin">CHECKOUT</button>
+  </form>
+         </div>
+      
         </div>
     )
 }
