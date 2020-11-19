@@ -37,9 +37,16 @@ const{ currentUser} = useAuth()
   }
   useEffect(
     ()=>{
-      console.log(currentUser)
+      document.getElementById('navigation-bar').style.display = "none";
     }
   )
+  useEffect(() => {
+    console.log('Hello World');
+    return () => {
+      document.getElementById('navigation-bar').style.display = "flex";
+
+    }
+}, [])
     return(
         <div className="signin">
     <div style={{position:"relative"}} className="signin_container">

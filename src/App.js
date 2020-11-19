@@ -1,17 +1,19 @@
 
 import Navbar from "./components/navbar"
-import React, {  useContext, useState, useEffect } from "react"
+import React, {useLocation,   useContext, useState, useEffect } from "react"
 import  IngProvider  from './contexts/IngredientsContext'
 import {useAuth} from "./contexts/IngredientsContext"
 import { AuthProvider } from "./contexts/AuthContext"
 import PrivateRoute from "./privateRoute"
+import PrivateRouteSecondary from "./PrivateRouteSecondary"
 
 
 import {
   BrowserRouter as Router,
   Switch,
   Route,
-  Link
+  Link,
+     
 } from "react-router-dom";
 
 
@@ -25,25 +27,24 @@ import Checkout from "./components/checkout"
 
 
 export function App() {  
-
+  const usePathname = () => {
+    const location = useLocation();
+    return location.pathname;
+  }
+  
   return (
 <div style={{height:"100%"}} className="App">
   <Router>
     <AuthProvider ><IngProvider>
- <Navbar/>
+   <Navbar/>
       <Switch>
           <Route exact path="/">
-           welcome to home page
-          </Route>
-          <Route path="/addorder">
-          <AddOrder/>
-
-          </Route>
         
-          <PrivateRoute exact path="/signin" component={Signin} />
-          <Route path="/orders">
-            <UserOrders/>
           </Route>
+         
+        
+          <PrivateRoute exact  path="/signin" component={Signin} />
+          <PrivateRoute exact path="/addorder" component={AddOrder} />
           <Route exact path="/account">
             <Account/>
           </Route>

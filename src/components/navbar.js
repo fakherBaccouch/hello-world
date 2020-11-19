@@ -10,7 +10,7 @@ import {
   } from "react-router-dom";
 const  Navbar=()=>{
     return (
-        <div className="navbar" >
+        <div id="navigation-bar" className="navbar" >
         <img style={{height:"60px"}} src={brand}></img>
                <ul style={{marginLeft:'4%'}}>
           <li>
