@@ -13,7 +13,7 @@ import {
     const {  logout ,currentUser} = useAuth()
  const  logingOut  = async ()=>{
      await logout()
-     history.push("/")
+     history.push("/signin")
   }
     return (
         <div  className="logout">

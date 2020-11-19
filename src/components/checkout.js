@@ -6,23 +6,23 @@ import {
     Switch,
     Route,
     useHistory,
-    Link
+    Link,Redirect
 } from "react-router-dom";
 import axios from "axios"
 import Burger from "./burger";
-
+import CircularUnderLoad from "../spinner"
 const Checkout = () => {
     const history = useHistory()
-    const { ingredients ,price} = useING()
-   
+    const { ingredients, price } = useING()
+    const [ spinner, setSpinner ] = useState(false)
+
     const { currentUser } = useAuth()
     const [info, setInfo] = useState({
         name: "",
         street: "",
         zipCode: "",
-        email:currentUser && currentUser.email,
+        email: currentUser && currentUser.email,
         country: "",
-        deleveryMethod: "select"
     })
     //edit the info object
     const editInfo = target => {
@@ -30,23 +30,28 @@ const Checkout = () => {
     };
     //Checking out confirmation
     const Checkout = (e) => {
-        console.log(currentUser.uid)
+        
         e.preventDefault();
-        let email = currentUser.uid
+        let email = currentUser.uid;
         const item = {
+           
             info,
             ingredients,
             price
         }
         axios.post('https://burgerapp-b7f16.firebaseio.com/orders.json', item
-        )
+        ).then(
+            ()=>history.push("/orders")
+
+            
+    )
     }
     return (
         <div className="checkout">
-         <h1 style={{fontSize:"50px",marginTop:"80px"}} className="header">We hope it tastes well !!!</h1>
-            <div style={{display:"flex",alignItems:"center",margin:"40px"}}>
-                <Burger/>
-               
+            <h1 style={{ fontSize: "50px", marginTop: "80px" }} className="header">We hope it tastes well !!!</h1>
+            <div style={{ display: "flex", alignItems: "center", margin: "40px" }}>
+                <Burger />
+
             </div>
             <div style={{position:"relative",margin:"20px",width:"30%",borderRadius:"5px"}} className="signin_container">
             <form   onSubmit={(event)=>Checkout(event)}>
@@ -77,10 +82,10 @@ const Checkout = () => {
       <span class="highlight"></span>
     
     </div>
-    <button type="submit" style={{background:"#FAAF18",color:"black"}}className="button button_signin">CHECKOUT</button>
+    <button onClick={()=>setSpinner(true)} type="submit" disabled={!info.name && !info.street &&!info.zipCOde &&!info.country }  style={{background:"#FAAF18",color:"white",height:"60px"}}className="button button_signin">{spinner == true?<p><CircularUnderLoad /></p> :<p>checkout</p>}</button>
   </form>
          </div>
-      
+
         </div>
     )
 }

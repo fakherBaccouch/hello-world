@@ -14,14 +14,10 @@ const  Navbar=()=>{
         <img style={{height:"60px"}} src={brand}></img>
                <ul style={{marginLeft:'4%'}}>
           <li>
-         <a> <Link to="/addorder">ADD ORDER</Link></a>  
+         <a> <Link to="/addorder">burgerBuilder</Link></a>  
           </li>
-          <li>
-         <a><Link to="/orders">ORDERS</Link></a>   
-          </li>
-          <li>
-           <a><Link to="/checkout">CHECKOUT</Link></a> 
-          </li>
+         
+          
         </ul>
         
         <ul > <div><Link to="/signin"><PermIdentityIcon link style={{color:"white",fontSize:"30px",marginLeft:"20px"}}/></Link></div> <div><ShoppingCartRoundedIcon style={{color:"white",fontSize:"30px",marginLeft:"30px"}}/></div></ul>

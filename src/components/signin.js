@@ -1,6 +1,6 @@
 import React, { createContext, useContext, useState, useEffect, useRef } from "react";
 import burger_logo from '../images/burger_logo.png';
-import { useAuth } from "../contexts/AuthContext";
+  import { useAuth } from "../contexts/AuthContext";
 import {
   BrowserRouter as Router,
   Switch,
@@ -8,7 +8,11 @@ import {
   useHistory,
   Link
 } from "react-router-dom";
+import CircularUnderLoad from "../spinner"
+
 const Signin=()=>{
+  const [ spinner, setSpinner ] = useState(false)
+
   const emailRef = useRef()
   const passwordRef = useRef()
   const { login } = useAuth()
@@ -56,7 +60,7 @@ const{ currentUser} = useAuth()
       <span class="highlight"></span>
       <label>Passwrod</label>
     </div>
-    <button className="button button_signin">SIGN IN</button>
+    <button  style={{padding:"0",height:"60px"}} onClick={()=>setSpinner(true)} className="button button_signin">{spinner? <CircularUnderLoad/>:<p >SIGN IN</p>}</button>
   </form>
      <p>Don't have an account yet?</p>
      <Link to="/signup"><button className="button button_to_signup">SIGN UP</button></Link>   

@@ -19,7 +19,7 @@ const Burger = () => {
     return (
         <div className="burger">
             <div className="top-bread"></div>
-            {sum<=0?<p style={{margin:"10px"}}>ADD ITEMS TO YOUR HAMBURGER</p>:ing}
+            {sum<=0?<p style={{margin:"10px",color:"grey"}}>ADD INGREDIENTS TO YOUR HAMBURGER</p>:ing}
 
             <div className="bottom-bread"></div>
         </div>

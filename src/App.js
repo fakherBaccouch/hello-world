@@ -47,9 +47,8 @@ export function App() {
           <Route exact path="/account">
             <Account/>
           </Route>
-          <Route path="/signup">
-            <Signup/>
-          </Route>
+          <PrivateRoute exact path="/signup" component={Signup} />
+
           <Route path="/checkout">
             <Checkout/>
           </Route>
